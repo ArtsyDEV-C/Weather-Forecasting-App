@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neko Global Weather 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video id="weather-video" class="background-video" autoplay loop muted>
+        <source src="videos/default.mp4" type="video/mp4">
+    </video>
+
+    <!-- Background Audio -->
+    <audio id="weather-music" autoplay loop>
+        <source src="audio/music-default.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Header Section -->
+    <header>
+        <video src="videos/logo.mp4" autoplay loop muted id="logo-video"></video>
+        <h1 class="website-title">Neko Global Weather 2</h1>
+    </header>
+
+    <!-- Search Bar Section -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Enter city..." autocomplete="off">
+        <button id="search-button">Search</button>
+        <button id="voice-search-button">🎤 Voice Search</button>
+    </div>
+
+    <!-- City Suggestions -->
+    <ul id="city-suggestions"></ul>
+
+    <!-- Current Weather Section -->
+    <div class="weather-container">
+        <h2 id="city-name"></h2>
+        <p>Temperature: <span id="weather-temperature"></span>°C</p>
+        <p>Condition: <span id="weather-description"></span></p>
+        <p>Wind Speed: <span id="wind-speed"></span> km/h</p>
+        <p>Humidity: <span id="humidity"></span>%</p>
+        <p>Pressure: <span id="pressure"></span> hPa</p>
+        <p>UV Index: <span id="uv-index"></span></p>
+        <p>Sunrise: <span id="sunrise"></span></p>
+        <p>Sunset: <span id="sunset"></span></p>
+    </div>
+
+    <!-- Weather Alerts -->
+    <div id="weather-alerts"></div>
+
+    <!-- Disaster Warnings -->
+    <div id="disaster-warnings"></div>
+
+    <!-- 10-Day Forecast -->
+    <section id="forecast">
+        <h2>10-Day Forecast</h2>
+        <div class="forecast-container"></div>
+    </section>
+
+    <!-- Weather Map -->
+    <div id="map"></div>
+
+    <!-- Windy Embed Section -->
+    <div class="windy-embed">
+        <iframe id="windy-map" width="650" height="450" src="https://embed.windy.com/embed2.html?zoom=6&overlay=wind"></iframe>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chat-container">
+        <div id="chatbox" class="chatbox"></div>
+        <input type="text" id="chat-input" placeholder="Ask me anything...">
+        <button id="send-btn">Send</button>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
