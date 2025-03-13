@@ -90,7 +90,7 @@ app.post('/chatbot-response', async (req, res) => {
 
 // ✅ Home Route
 app.get("/", (req, res) => {
-    res.send("🚀 Weather Forecasting API is Running!");
+    res.send("Weather Forecast App is Running...");
 });
 
 // ✅ Start the Server
